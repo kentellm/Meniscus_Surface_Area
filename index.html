@@ -1,0 +1,41 @@
+<div class="controls">
+  <label>
+    Outer radius (R):
+    <input type="number" id="outerRadius" value="150" min="0">
+  </label>
+
+  <label>
+    Inner flat radius (r):
+    <input type="number" id="innerRadius" value="75" min="0">
+  </label>
+
+  <label>
+    Meniscus sphere radius (S):
+    <input type="number" id="sphereRadius" value="500" min="1">
+  </label>
+</div>
+
+<div class="results">
+  <div><strong>Flat area (πR²):</strong> <span id="areaFlat">–</span></div>
+  <div><strong>Meniscus curved area:</strong> <span id="areaMeniscus">–</span></div>
+  <div><strong>Total wetted area:</strong> <span id="areaTotal">–</span></div>
+  <div><strong>%increase:</strong> <span id="areaIncrease">–</span></div>
+</div>
+
+<svg id="diagram" width="400" height="300">
+  <!-- Cylinder walls -->
+  <line id="wallLeft"  x1="200" y1="20" x2="200" y2="280" stroke="black" stroke-width="2"/>
+  <line id="wallRight" x1="200" y1="20" x2="200" y2="280" stroke="black" stroke-width="2"/>
+
+  <!-- Meniscus arc -->
+  <path id="meniscusArc" stroke="blue" stroke-width="2" fill="none"/>
+
+  <!-- Flat region -->
+  <line id="flatLine" stroke="red" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text id="labelR"  x="10" y="20" font-size="14"></text>
+  <text id="labelr"  x="10" y="40" font-size="14"></text>
+  <text id="labelS"  x="10" y="60" font-size="14"></text>
+</svg>
+
